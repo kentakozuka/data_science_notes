@@ -14,23 +14,25 @@ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 # Coprレポジトリ
 sudo dnf copr enable sergiomb/google-drive-ocamlfuse
 
+
+#------------------------------------#
+# dnf update
+#------------------------------------#
 # まずは更新
 sudo dnf update -y
 
+
+#------------------------------------#
+# dnf update
+#------------------------------------#
 #必要なプログラムをダウンロード
 sudo dnf install -y \
 	gimp \
-	git \
 	inkscape \
 	openssh \
 	rsync \
 	gnome-tweak-tool \
 	ibus-mozc \
-	python3-devel \
-	python-devel \
-	vim-enhanced \
-	vim-X11 \
-	hub \
 	nkf \
 	clamav \
 	clamav-update \
@@ -39,6 +41,21 @@ sudo dnf install -y \
 	unzip \
 	evince \
 	w3m \
+
+# python
+sudo dnf install -y \
+	python3-devel \
+	python-devel \
+
+# git
+sudo dnf install -y \
+	git \
+	hub \
+	
+# vim
+sudo dnf install -y \
+	vim-enhanced \
+	vim-X11 \
 
 # java web
 sudo dnf install -y \
@@ -50,6 +67,11 @@ sudo dnf install -y \
 	flash-plugin \
 	alsa-plugins-pulseaudio \
 	libcurl
+
+# google chrome
+URL=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo dnf install -y ${URL}
+# chromeにlineを追加する
 
 # google drive
 sudo dnf install -y \
@@ -69,9 +91,8 @@ reboot
 
 sudo pip3 install trash-cli
 
-#------------------------------------#
+
 # clam av
-#------------------------------------#
 sudo dnf install -y \
 	clamav \
 	clamav-update \
@@ -129,12 +150,6 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.vim
 rm installer.sh
 
-#------------------------------------#
-# google chrome
-#------------------------------------#
-URL=https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-sudo dnf install -y ${URL}
-# chromeにlineを追加する
 
 #------------------------------------#
 # python
