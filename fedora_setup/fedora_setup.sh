@@ -41,6 +41,7 @@ sudo dnf install -y \
 	unzip \
 	evince \
 	w3m \
+	haskell-platform \
 
 # python
 sudo dnf install -y \
