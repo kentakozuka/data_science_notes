@@ -187,3 +187,10 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
 
+#------------------------------------#
+# firefox-beta
+# 上部タブを隠す
+#
+# vim Profiles/<ランダム文字>.default/chrome/userChrome.css
+# #tabbrowser-tabs { visibility: collapse !important; }
+#------------------------------------#
