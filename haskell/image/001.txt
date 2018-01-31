@@ -1,0 +1,15 @@
+graph LR
+    z-->x1
+    z-->x2
+    x1-->y
+    x2-->y
+    subgraph C
+    z
+    end
+    subgraph A
+    x1
+    x2
+    end
+    subgraph B
+    y
+    end

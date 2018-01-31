@@ -1,0 +1,6 @@
+graph TD
+    c'-- m -->c
+    c'-- p' -->a
+    c-- p -->a
+    c-- q -->b
+    c'-- q' -->b

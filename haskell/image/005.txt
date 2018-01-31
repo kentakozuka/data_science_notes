@@ -1,0 +1,14 @@
+graph TB
+    subgraph C
+    a-- f -->b
+    b-- g -->c
+    a-- g.f -->c
+    end
+    a-- F -->Fa
+    b-- F -->Fb
+    c-- F -->Fc
+    subgraph D
+    Fa-- Ff -->Fb
+    Fb-- Fg-->Fc
+    Fa-- Fg.Ff-->Fc
+    end
